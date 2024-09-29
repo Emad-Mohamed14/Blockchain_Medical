@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blockchain Records</title>
+</head>
+<body>
+    <h1>Blockchain Records</h1>
+    <table border="1">
+        <tr>
+            <th>Patient Name</th>
+            <th>UID</th>
+            <th>Age</th>
+            <th>Medical History</th>
+            <th>Timestamp</th>
+            <th>Hash</th>
+            <th>Previous Hash</th>
+        </tr>
+        {% for block in blockchain %}
+        <tr>
+            <td>{{ block.patient_name }}</td>
+            <td>{{ block.uid }}</td>
+            <td>{{ block.age }}</td>
+            <td>{{ block.medical_history }}</td>
+            <td>{{ block.timestamp }}</td>
+            <td>{{ block.hash }}</td>
+            <td>{{ block.previous_hash }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

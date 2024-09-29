@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Patient Records</title>
+</head>
+<body>
+    <h1>Patient Medical Records</h1>
+    {% for record in all_records %}
+    <div>
+        <h3>Record for UID: {{ record.uid }}</h3>
+        <p><strong>Patient Name:</strong> {{ record.patient_name }}</p>
+        <p><strong>Age:</strong> {{ record.age }}</p>
+        <p><strong>Medical History:</strong> {{ record.medical_history }}</p>
+        <p><strong>Timestamp:</strong> {{ record.timestamp }}</p>
+        <p><strong>Hash:</strong> {{ record.hash }}</p>
+        <p><strong>Previous Hash:</strong> {{ record.previous_hash }}</p>
+    </div>
+    <hr>
+    {% endfor %}
+</body>
+</html>
